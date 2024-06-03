@@ -1,11 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import useAuth from '../hooks/useAuth';
 
 const Navbar = () => {
+  const { logOut, user } = useAuth();
   return (
     <div className="">
       <div className="navbar bg-base-100">
         <div className="flex-1">
-          <a className="btn btn-ghost text-xl">TaskHub</a>
+          <Link to={''} className="btn btn-ghost text-xl">
+            TaskHub
+          </Link>
         </div>
         <div className="flex-none gap-2">
           <div className="dropdown dropdown-end">
@@ -17,7 +21,10 @@ const Navbar = () => {
               <div className="w-10 rounded-full">
                 <img
                   alt="Tailwind CSS Navbar component"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  src={
+                    user?.photoURL ||
+                    'https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg'
+                  }
                 />
               </div>
             </div>
@@ -40,10 +47,18 @@ const Navbar = () => {
                 <Link to={'/blog'}>Blog</Link>
               </li>
               <li>
-                <a>Login</a>
+                <Link to={'/dashboard'}>Dashboard</Link>
               </li>
               <li>
-                <a>SignUp</a>
+                <Link to={'/login'}>Login</Link>
+              </li>
+              <li>
+                <Link to={'/register'}>SignUp</Link>
+              </li>
+              <li>
+                <button onClick={logOut} className="btn btn-primary">
+                  Logout
+                </button>
               </li>
             </ul>
           </div>

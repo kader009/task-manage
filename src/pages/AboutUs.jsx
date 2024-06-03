@@ -3,7 +3,7 @@ const AboutUs = () => {
     <div className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
       <div className="max-w-screen-xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-extrabold mb-4">About TaskHub</h1>
+          <h1 className="text-3xl font-extrabold mb-4">About TaskHub</h1>
           <p className="text-lg text-gray-600 dark:text-gray-400">
             Learn more about our company, mission, and the team behind TaskHub.
           </p>
