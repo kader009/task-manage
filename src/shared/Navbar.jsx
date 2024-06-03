@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <div className="">
@@ -24,15 +26,24 @@ const Navbar = () => {
               className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
             >
               <li>
-                <a className="justify-between">
-                  Profile
-                </a>
+                <Link to={''} className="justify-between">
+                  Home
+                </Link>
               </li>
               <li>
-                <a>Settings</a>
+                <a>About Us</a>
               </li>
               <li>
-                <a>Logout</a>
+                <Link to={'/contact-us'}>Contact Us</Link>
+              </li>
+              <li>
+                <a>Blog</a>
+              </li>
+              <li>
+                <a>Login</a>
+              </li>
+              <li>
+                <a>SignUp</a>
               </li>
             </ul>
           </div>
