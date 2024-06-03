@@ -30,23 +30,13 @@ const FAQSection = () => {
       answer:
         'Yes, you can cancel your subscription at any time from your account settings. No long-term contracts are required.',
     },
-    {
-      question: 'Do you offer a mobile app?',
-      answer:
-        'Yes, we offer a mobile app for both iOS and Android devices. You can manage your tasks on the go.',
-    },
-    {
-      question: 'How do I reset my password?',
-      answer:
-        'You can reset your password by clicking the "Forgot Password" link on the login page and following the instructions.',
-    },
   ];
 
   return (
     <div className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white">
+          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white">
             Frequently Asked Questions
           </h2>
         </div>
