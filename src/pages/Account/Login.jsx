@@ -8,6 +8,14 @@ const Login = () => {
   const navigate = useNavigate();
   const from = location?.state?.from?.pathname || '/';
 
+  const handleGoogle = () =>{
+    googleLogin()
+  }
+
+  const handleGithub = () =>{
+    githubLogin()
+  }
+
   const HandleLogin = async (e) => {
     e.preventDefault();
     const form = e.target;
@@ -87,7 +95,7 @@ const Login = () => {
             <span className="mx-4 text-gray-600 dark:text-gray-400">OR</span>
             <span className="border-t border-gray-300 dark:border-gray-600 flex-grow"></span>
           </div>
-          <button onClick={googleLogin} className="w-full flex items-center justify-center bg-red-600 text-white py-2 px-4 rounded-lg mb-4 hover:bg-red-700 transition">
+          <button onClick={handleGoogle} className="w-full flex items-center justify-center bg-red-600 text-white py-2 px-4 rounded-lg mb-4 hover:bg-red-700 transition">
             <svg className="w-6 h-6 mr-2" viewBox="0 0 48 48">
               <path
                 fill="#EA4335"
@@ -108,7 +116,7 @@ const Login = () => {
             </svg>
             Register with Google
           </button>
-          <button onClick={githubLogin} className="w-full flex items-center justify-center bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-900 transition">
+          <button onClick={handleGithub} className="w-full flex items-center justify-center bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-900 transition">
             <svg
               className="w-6 h-6 mr-2"
               fill="currentColor"

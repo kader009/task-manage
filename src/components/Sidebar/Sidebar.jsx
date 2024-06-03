@@ -5,14 +5,25 @@ import {
   SettingFilled,
   RollbackOutlined,
   TagFilled,
-  TaobaoCircleFilled
+  TaobaoCircleFilled,
 } from '@ant-design/icons';
+import useAuth from '../../hooks/useAuth';
 
 const { Sider } = Layout;
 
 const menuItems = [
-  { key: '1', icon: <UserOutlined />, label: 'Profile Management', path: 'profile' },
-  { key: '2', icon: <TaobaoCircleFilled />, label: 'All Task', path: 'alltask' },
+  {
+    key: '1',
+    icon: <UserOutlined />,
+    label: 'Profile Management',
+    path: 'profile',
+  },
+  {
+    key: '2',
+    icon: <TaobaoCircleFilled />,
+    label: 'All Task',
+    path: 'alltask',
+  },
   { key: '3', icon: <TagFilled />, label: 'Add Task', path: 'addtask' },
   {
     key: '4',
@@ -24,19 +35,10 @@ const menuItems = [
 ];
 
 const Sidebar = () => {
+  const { logOut } = useAuth();
   return (
     <div>
-      <Sider
-        style={{ height: '100vh' }}
-        breakpoint="lg"
-        collapsedWidth="0"
-        onBreakpoint={(broken) => {
-          console.log(broken);
-        }}
-        onCollapse={(collapsed, type) => {
-          console.log(collapsed, type);
-        }}
-      >
+      <Sider style={{ height: '100vh' }} breakpoint="lg" collapsedWidth="0">
         <div className="demo-logo-vertical" />
         <div
           style={{
@@ -48,13 +50,18 @@ const Sidebar = () => {
         >
           <Link to={'/'}>TaskHub</Link>
         </div>
-        <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
+        <Menu theme="dark" mode="inline" defaultSelectedKeys={['0']}>
           {menuItems.map((item) => (
             <Menu.Item key={item.key} icon={item.icon}>
               <Link to={item.path}>{item.label}</Link>
             </Menu.Item>
           ))}
         </Menu>
+        <div className="ms-6">
+          <button onClick={logOut} className="px-14 py-2 rounded bg-blue-500 text-white">
+            Logout
+          </button>
+        </div>
       </Sider>
     </div>
   );

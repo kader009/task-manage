@@ -14,7 +14,7 @@ const AboutUs = () => {
           <p className="text-gray-600 dark:text-gray-400 mb-4">
             TaskHub is a leading task management tool designed to help teams and
             individuals organize their tasks, collaborate seamlessly, and
-            increase productivity. Founded in 2023, TaskHub aims to simplify
+            increase productivity. Founded in 2024, TaskHub aims to simplify
             task management through intuitive design and powerful features.
           </p>
           <p className="text-gray-600 dark:text-gray-400">
