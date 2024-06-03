@@ -10,6 +10,36 @@ const FAQSection = () => {
       answer:
         'You can upgrade your plan from the settings page in your account dashboard.',
     },
+    {
+      question: 'Can I collaborate with my team?',
+      answer:
+        'Yes, our platform supports team collaboration. You can invite team members and assign tasks to them.',
+    },
+    {
+      question: 'Is my data secure?',
+      answer:
+        'We take data security seriously. Your data is encrypted and stored securely in compliance with industry standards.',
+    },
+    {
+      question: 'Do you offer customer support?',
+      answer:
+        'Yes, we offer 24/7 customer support through email, chat, and phone.',
+    },
+    {
+      question: 'Can I cancel my subscription anytime?',
+      answer:
+        'Yes, you can cancel your subscription at any time from your account settings. No long-term contracts are required.',
+    },
+    {
+      question: 'Do you offer a mobile app?',
+      answer:
+        'Yes, we offer a mobile app for both iOS and Android devices. You can manage your tasks on the go.',
+    },
+    {
+      question: 'How do I reset my password?',
+      answer:
+        'You can reset your password by clicking the "Forgot Password" link on the login page and following the instructions.',
+    },
   ];
 
   return (
