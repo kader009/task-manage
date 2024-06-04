@@ -1,11 +1,29 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useLoaderData } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-const AddTask = () => {
+const EditTask = () => {
+  const tasks = useLoaderData();
+  console.log(tasks);
+  const {
+    title: initialTitle,
+    description: initialDescription,
+    status: initialStatus,
+    priority: initialPriority,
+    _id,
+  } = tasks;
+
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [status, setStatus] = useState('');
   const [priority, setPriority] = useState('');
+
+  useEffect(() => {
+    setTitle(initialTitle || '');
+    setDescription(initialDescription || '');
+    setStatus(initialStatus || '');
+    setPriority(initialPriority || '');
+  }, [initialTitle, initialDescription, initialStatus, initialPriority]);
 
   const handleSubmit = async (e) => {
     const token = localStorage.getItem('token');
@@ -13,11 +31,11 @@ const AddTask = () => {
     const taskList = { title, description, status, priority };
 
     try {
-      const response = await fetch(`http://localhost:5000/tasks`, {
-        method: 'POST',
+      const response = await fetch(`http://localhost:5000/tasks/${_id}`, {
+        method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
-          authorization:`Bearer ${token}`
+          authorization: `Bearer ${token}`
         },
         body: JSON.stringify(taskList),
       });
@@ -25,18 +43,18 @@ const AddTask = () => {
       if (response.ok) {
         const data = await response.json();
         console.log(data);
-        toast.success('Tasks added successfully!');
+        toast.success('Tasks update successfully!');
       } else {
-        toast.error('Failed to add tasks.');
+        toast.error('Failed to update tasks.');
       }
     } catch (error) {
-      toast.error('An error occurred while adding the tasks.');
+      toast.error('An error occurred while update the tasks.');
     }
   };
 
   return (
     <div>
-      <h1 className="my-3 text-2xl font-semibold">Add Your Task</h1>
+      <h1 className="my-3 text-2xl font-semibold">Edit Your Task</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label
@@ -129,4 +147,4 @@ const AddTask = () => {
   );
 };
 
-export default AddTask;
+export default EditTask;

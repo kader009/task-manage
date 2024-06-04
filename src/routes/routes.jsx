@@ -3,7 +3,6 @@ import MainLayout from '../Layout/MainLayout';
 import Home from '../pages/Home/Home';
 import ContactUsPage from '../pages/ContactUsPage';
 import AboutUs from '../pages/AboutUs';
-import BlogSection from '../pages/BlogSection';
 import Login from '../pages/Account/Login';
 import Register from '../pages/Account/Register';
 import ErrorPage from '../pages/ErrorPage';
@@ -13,6 +12,7 @@ import DashboardHome from '../Layout/DashboardHome';
 import AddTask from '../pages/Task/AddTask';
 import AllTask from '../pages/Task/AllTask';
 import PrivateRoute from './private/PrivateRoute';
+import EditTask from '../pages/Task/EditTask';
 
 const route = createBrowserRouter([
   {
@@ -32,10 +32,7 @@ const route = createBrowserRouter([
         path: '/about-us',
         element: <AboutUs />,
       },
-      {
-        path: '/blog',
-        element: <BlogSection />,
-      },
+
       {
         path: '/login',
         element: <Login />,
@@ -82,6 +79,16 @@ const route = createBrowserRouter([
             <AllTask />
           </PrivateRoute>
         ),
+      },
+      {
+        path: 'alltask/edit/:id',
+        element: (
+          <PrivateRoute>
+            <EditTask />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/tasks/${params.id}`),
       },
     ],
   },

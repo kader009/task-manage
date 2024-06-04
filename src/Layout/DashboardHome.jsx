@@ -27,27 +27,10 @@ const DashboardHome = () => {
     { id: 2, title: 'Task 2', status: 'Completed' },
     { id: 3, title: 'Task 3', status: 'Pending' },
   ];
+  
   return (
     <div className="mx-4 my-4">
-      <Row gutter={[16, 16]}>
-        <Col span={24}>
-          <Card>
-            <Title level={3}>Task Overview</Title>
-            <ResponsiveContainer width="100%" height={300}>
-              <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-                <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-              </LineChart>
-            </ResponsiveContainer>
-          </Card>
-        </Col>
-      </Row>
-      <Row gutter={[16, 16]} className="mt-4">
+      <Row gutter={[16, 16]} className="mt-4 mb-4">
         {tasks.map((task) => (
           <Col xs={24} sm={12} lg={8} key={task.id}>
             <Card>
@@ -56,6 +39,33 @@ const DashboardHome = () => {
             </Card>
           </Col>
         ))}
+      </Row>
+
+      <Row gutter={[16, 16]}>
+        <Col span={24}>
+          <Card>
+            <Title level={3}>Task Overview</Title>
+            <ResponsiveContainer width="100%" height={300}>
+              <LineChart
+                data={data}
+                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+              >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Line
+                  type="monotone"
+                  dataKey="pv"
+                  stroke="#8884d8"
+                  activeDot={{ r: 8 }}
+                />
+                <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+              </LineChart>
+            </ResponsiveContainer>
+          </Card>
+        </Col>
       </Row>
     </div>
   );

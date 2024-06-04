@@ -3,13 +3,35 @@ import useAuth from '../../hooks/useAuth';
 
 const Register = () => {
   const { Createuser, googleLogin, githubLogin } = useAuth();
-  const handleGoogle = () =>{
-    googleLogin()
-  }
 
-  const handleGithub = () =>{
-    githubLogin()
-  }
+  const handleGoogle = () => {
+    const token = localStorage.getItem('token'); 
+    console.log(token);
+    googleLogin().then((data) => {
+      if (data?.user?.email) { 
+        const userInfo = {
+          email: data?.user?.email,
+          name: data?.user?.displayName,
+        };
+        fetch(`http://localhost:5000/users`, {
+          method: 'POST',
+          headers: {
+            'Content-type': 'application/json',
+            authorization: `Bearer ${token}`
+          },
+          body: JSON.stringify(userInfo),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            localStorage.setItem('token', data?.token);
+          });
+      }
+    });
+  };
+
+  const handleGithub = () => {
+    githubLogin();
+  };
 
   const HandleRegister = (e) => {
     e.preventDefault();
@@ -17,10 +39,10 @@ const Register = () => {
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
-    Createuser(email, password)
-    form.reset()
+    Createuser(email, password);
+    form.reset();
   };
-  
+
   return (
     <div>
       <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
@@ -84,7 +106,10 @@ const Register = () => {
             <span className="mx-4 text-gray-600 dark:text-gray-400">OR</span>
             <span className="border-t border-gray-300 dark:border-gray-600 flex-grow"></span>
           </div>
-          <button onClick={handleGoogle} className="w-full flex items-center justify-center bg-red-600 text-white py-2 px-4 rounded-lg mb-4 hover:bg-red-700 transition">
+          <button
+            onClick={handleGoogle}
+            className="w-full flex items-center justify-center bg-red-600 text-white py-2 px-4 rounded-lg mb-4 hover:bg-red-700 transition"
+          >
             <svg className="w-6 h-6 mr-2" viewBox="0 0 48 48">
               <path
                 fill="#EA4335"
@@ -105,7 +130,10 @@ const Register = () => {
             </svg>
             Register with Google
           </button>
-          <button onClick={handleGithub} className="w-full flex items-center justify-center bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-900 transition">
+          <button
+            onClick={handleGithub}
+            className="w-full flex items-center justify-center bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-900 transition"
+          >
             <svg
               className="w-6 h-6 mr-2"
               fill="currentColor"

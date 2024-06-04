@@ -1,21 +1,37 @@
+import { useEffect, useState } from 'react';
+import SingleTask from './SingleTask';
+
 const AllTask = () => {
+  const [tasks, setTasks] = useState([]);
+  const [records, setRecords] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:5000/tasks')
+      .then((res) => res.json())
+      .then((data) => {
+        setTasks(data);
+        setRecords(data)
+      });
+  }, []);
+
+  const Filter = (event) =>{
+    setRecords(tasks.filter(tsk => tsk.title.toLowerCase().includes(event.target.value)))
+  }
+
+  const handleUpdate = (id) => {
+    setTasks(tasks.filter((task) => task._id !== id));
+  };
+
   return (
     <div className="p-4">
+      <h1 className="my-2 text-2xl font-semibold">All Task</h1>
+      <div className='mb-4'>
+      <input onChange={Filter} type="text" className="block w-full max-w-xs px-4 py-2 text-sm font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none leading-relaxed" placeholder="Search Title" />
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div className="bg-white p-4 rounded-lg shadow-lg">
-          <h3 className="text-lg font-bold">title</h3>
-          <p>description</p>
-          <p>Status: </p>
-          <p>Priority: </p>
-          <div className="mt-4 space-x-2">
-            <button className="bg-blue-600 text-white py-1 px-3 rounded-md hover:bg-blue-700 transition">
-              Edit
-            </button>
-            <button className="bg-red-600 text-white py-1 px-3 rounded-md hover:bg-red-700 transition">
-              Delete
-            </button>
-          </div>
-        </div>
+        {records.map((task) => (
+          <SingleTask key={task._id} task={task} handleUpdate={handleUpdate}/>
+        ))}
       </div>
     </div>
   );

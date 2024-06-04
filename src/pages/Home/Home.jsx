@@ -5,6 +5,7 @@ import HowItWorksSection from "../HowItWorkSection";
 import PricingSection from "../PricingSection";
 import TestimonialsSection from "../TestimonialSection";
 import NewsletterSection from "../NewsletterSection";
+import BlogSection from "../BlogSection";
 
 const Home = () => {
   return <div>
@@ -25,6 +26,9 @@ const Home = () => {
     </div>
     <div>
       <FAQSection/>
+    </div>
+    <div>
+      <BlogSection/>
     </div>
     <div>
       <NewsletterSection/>
