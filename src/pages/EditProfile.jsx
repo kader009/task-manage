@@ -16,7 +16,7 @@ const EditProfile = () => {
     console.log(userData);
 
     try {
-      const response = await fetch(`http://localhost:5000/user/${user?.email}`, {
+      const response = await fetch(`https://task-manage-backend-blush.vercel.app/user/${user?.email}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

@@ -8,7 +8,7 @@ const SingleTask = ({ task, handleUpdate }) => {
     const token = localStorage.getItem('token');
     console.log(token);
     try {
-      const response = await fetch(`http://localhost:5000/tasks/${_id}`, {
+      const response = await fetch(`https://task-manage-backend-blush.vercel.app/tasks/${_id}`, {
         method: 'DELETE',
         headers: {
           authorization: `Bearer ${token}`,

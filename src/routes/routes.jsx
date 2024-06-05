@@ -72,7 +72,7 @@ const route = createBrowserRouter([
             <EditProfile />
           </PrivateRoute>
         ),
-        loader: ({params}) => fetch(`http://localhost:5000/users/get/${params.id}`)
+        loader: ({params}) => fetch(`https://task-manage-backend-blush.vercel.app/users/get/${params.id}`)
       },
       {
         path: 'addtask',
@@ -98,7 +98,7 @@ const route = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/tasks/${params.id}`),
+          fetch(`https://task-manage-backend-blush.vercel.app/tasks/${params.id}`),
       },
     ],
   },

@@ -12,7 +12,7 @@ const Register = () => {
           email: data?.user?.email,
           name: data?.user?.displayName,
         };
-        fetch(`http://localhost:5000/users`, {
+        fetch(`https://task-manage-backend-blush.vercel.app/users`, {
           method: 'POST',
           headers: {
             'Content-type': 'application/json',

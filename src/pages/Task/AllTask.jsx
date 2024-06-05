@@ -6,7 +6,7 @@ const AllTask = () => {
   const [records, setRecords] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/tasks')
+    fetch('https://task-manage-backend-blush.vercel.app/tasks')
       .then((res) => res.json())
       .then((data) => {
         setTasks(data);

@@ -34,7 +34,7 @@ const EditTask = () => {
     const taskList = { title, description, status, priority };
 
     try {
-      const response = await fetch(`http://localhost:5000/tasks/${_id}`, {
+      const response = await fetch(`https://task-manage-backend-blush.vercel.app/tasks/${_id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
