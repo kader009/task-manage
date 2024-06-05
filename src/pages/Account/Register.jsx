@@ -6,7 +6,6 @@ const Register = () => {
 
   const handleGoogle = () => {
     const token = localStorage.getItem('token');
-    console.log(token);
     googleLogin().then((data) => {
       if (data?.user?.email) {
         const userInfo = {

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'react'; 
 import { toast } from 'react-toastify';
 
 const AddTask = () => {
@@ -15,7 +15,7 @@ const AddTask = () => {
     const taskList = { title, description, status, priority };
 
     try {
-      const response = await fetch(`http://localhost:5000/tasks`, {
+      const response = await fetch(`http://localhost:5000/tasks`, { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

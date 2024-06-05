@@ -19,7 +19,8 @@ const AllTask = () => {
   }
 
   const handleUpdate = (id) => {
-    setTasks(tasks.filter((task) => task._id !== id));
+    setTasks((prevTasks) => prevTasks.filter((task) => task._id !== id));
+    setRecords((prevRecords) => prevRecords.filter((task) => task._id !== id));
   };
 
   return (
