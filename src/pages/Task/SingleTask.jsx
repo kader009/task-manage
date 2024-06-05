@@ -5,13 +5,13 @@ import { toast } from 'react-toastify';
 const SingleTask = ({ task, handleUpdate }) => {
   const { _id, title, description, status, priority } = task;
   const handleDelete = async () => {
-    const token = localStorage.getItem('token')
+    const token = localStorage.getItem('token');
     try {
       const response = await fetch(`http://localhost:5000/tasks/${_id}`, {
         method: 'DELETE',
-        headers:{
-          authorization:`Bearer ${token}`
-        }
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
       });
 
       if (response.ok) {

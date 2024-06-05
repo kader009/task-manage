@@ -13,6 +13,7 @@ import AddTask from '../pages/Task/AddTask';
 import AllTask from '../pages/Task/AllTask';
 import PrivateRoute from './private/PrivateRoute';
 import EditTask from '../pages/Task/EditTask';
+import EditProfile from '../pages/EditProfile';
 
 const route = createBrowserRouter([
   {
@@ -63,6 +64,15 @@ const route = createBrowserRouter([
             <ProfilePage />
           </PrivateRoute>
         ),
+      },
+      {
+        path: 'profile/edit-profile/:id',
+        element: (
+          <PrivateRoute>
+            <EditProfile />
+          </PrivateRoute>
+        ),
+        loader: ({params}) => fetch(`http://localhost:5000/users/get/${params.id}`)
       },
       {
         path: 'addtask',

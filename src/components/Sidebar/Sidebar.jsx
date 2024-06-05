@@ -29,9 +29,9 @@ const menuItems = [
     key: '4',
     icon: <RollbackOutlined />,
     label: 'Roles & Users',
-    path: '/roles-user',
+    path: 'roles-user',
   },
-  { key: '5', icon: <SettingFilled />, label: 'Settings', path: '/settings' },
+  { key: '5', icon: <SettingFilled />, label: 'Settings', path: 'settings' },
 ];
 
 const Sidebar = () => {

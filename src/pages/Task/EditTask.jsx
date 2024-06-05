@@ -35,7 +35,7 @@ const EditTask = () => {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
-          authorization: `Bearer ${token}`
+          authorization: `Bearer ${token}`,
         },
         body: JSON.stringify(taskList),
       });
