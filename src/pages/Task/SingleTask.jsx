@@ -5,14 +5,14 @@ import { toast } from 'react-toastify';
 const SingleTask = ({ task, handleUpdate }) => {
   const { _id, title, description, status, priority } = task;
   const handleDelete = async () => {
-    const token = localStorage.getItem('token');
-    console.log(token);
+    // const token = localStorage.getItem('token');
+    // console.log(token);
     try {
       const response = await fetch(`https://task-manage-backend-blush.vercel.app/tasks/${_id}`, {
         method: 'DELETE',
-        headers: {
-          authorization: `Bearer ${token}`,
-        },
+        // headers: {
+        //   authorization: `Bearer ${token}`,
+        // },
       });
 
       if (response.ok) {

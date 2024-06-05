@@ -8,7 +8,7 @@ const AddTask = () => {
   const [priority, setPriority] = useState('');
 
   const handleSubmit = async (e) => {
-    const token = localStorage.getItem('token');
+    // const token = localStorage.getItem('token');
     // console.log(token); 
     // not close
 
@@ -20,7 +20,7 @@ const AddTask = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'authorization': `Bearer ${token}`,
+          // 'authorization': `Bearer ${token}`,
         },
         body: JSON.stringify(taskList),
       });

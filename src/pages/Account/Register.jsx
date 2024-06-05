@@ -5,7 +5,7 @@ const Register = () => {
   const { Createuser, googleLogin, githubLogin } = useAuth();
 
   const handleGoogle = () => {
-    const token = localStorage.getItem('token');
+    // const token = localStorage.getItem('token');
     googleLogin().then((data) => {
       if (data?.user?.email) {
         const userInfo = {
@@ -16,13 +16,14 @@ const Register = () => {
           method: 'POST',
           headers: {
             'Content-type': 'application/json',
-            'authorization': `Bearer ${token}`,
+            // 'authorization': `Bearer ${token}`,
           },
           body: JSON.stringify(userInfo),
         })
           .then((res) => res.json())
           .then((data) => {
-            localStorage.setItem('token', data?.token);
+            // localStorage.setItem('token', data?.token);
+            console.log(data);
           });
       }
     });

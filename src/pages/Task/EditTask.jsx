@@ -27,8 +27,8 @@ const EditTask = () => {
   }, [initialTitle, initialDescription, initialStatus, initialPriority]);
 
   const handleSubmit = async (e) => {
-    const token = localStorage.getItem('token');
-    console.log(token);
+    // const token = localStorage.getItem('token');
+    // console.log(token);
 
     e.preventDefault();
     const taskList = { title, description, status, priority };
@@ -38,7 +38,7 @@ const EditTask = () => {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
-          authorization: `Bearer ${token}`,
+          // authorization: `Bearer ${token}`,
         },
         body: JSON.stringify(taskList),
       });

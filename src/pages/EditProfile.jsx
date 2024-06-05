@@ -6,7 +6,7 @@ const EditProfile = () => {
   console.log(user); 
 
   const Handlesubmit = async (e) => {
-    const token = localStorage.getItem('token')
+    // const token = localStorage.getItem('token')
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
@@ -20,7 +20,7 @@ const EditProfile = () => {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
-          authorization:`Bearer ${token}`
+          // authorization:`Bearer ${token}`
         },
         body: JSON.stringify(userData),
       });
