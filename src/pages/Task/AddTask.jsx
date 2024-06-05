@@ -9,7 +9,8 @@ const AddTask = () => {
 
   const handleSubmit = async (e) => {
     const token = localStorage.getItem('token');
-    console.log(token);
+    // console.log(token); 
+    // not close
 
     e.preventDefault();
     const taskList = { title, description, status, priority };
