@@ -35,7 +35,7 @@ const menuItems = [
 ];
 
 const Sidebar = () => {
-  const { logOut } = useAuth();
+  const { logOut, user } = useAuth();
   return (
     <div>
       <Sider style={{ height: '100vh' }} breakpoint="lg" collapsedWidth="0">
@@ -58,9 +58,17 @@ const Sidebar = () => {
           ))}
         </Menu>
         <div className="ms-6">
-          <button onClick={logOut} className="px-14 py-2 rounded bg-blue-500 text-white">
+          <button
+            onClick={logOut}
+            className="px-14 py-2 rounded bg-blue-500 text-white"
+          >
             Logout
           </button>
+        </div>
+        <div className="avatar ms-16 mt-6">
+          <div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+            <img src={user?.photoURL} />
+          </div>
         </div>
       </Sider>
     </div>

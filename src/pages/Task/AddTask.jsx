@@ -9,6 +9,8 @@ const AddTask = () => {
 
   const handleSubmit = async (e) => {
     const token = localStorage.getItem('token');
+    console.log(token);
+
     e.preventDefault();
     const taskList = { title, description, status, priority };
 
@@ -17,7 +19,7 @@ const AddTask = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          authorization: `Bearer ${token}`,
+          'authorization': `Bearer ${token}`,
         },
         body: JSON.stringify(taskList),
       });

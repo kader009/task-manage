@@ -19,6 +19,13 @@ const TestimonialsSection = () => {
         'I love how easy it is to keep track of tasks and deadlines. The collaboration features have improved our teams productivity immensely.',
     },
     {
+      name: 'Lana Amanda',
+      role: 'SEO Expert',
+      image: 'https://randomuser.me/api/portraits/women/45.jpg',
+      testimony:
+        'I love how easy it is to keep track of tasks and deadlines. The collaboration features have improved our teams work more better.',
+    },
+    {
       name: 'Michael Johnson',
       role: 'Freelancer',
       image: 'https://randomuser.me/api/portraits/men/46.jpg',

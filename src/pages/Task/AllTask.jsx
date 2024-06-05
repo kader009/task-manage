@@ -24,7 +24,7 @@ const AllTask = () => {
 
   return (
     <div className="p-4">
-      <h1 className="my-2 text-2xl font-semibold">All Task</h1>
+      <h1 className="ms-3 mb-3 text-2xl font-semibold">All Task</h1>
       <div className='mb-4'>
       <input onChange={Filter} type="text" className="block w-full max-w-xs px-4 py-2 text-sm font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none leading-relaxed" placeholder="Search Title" />
       </div>

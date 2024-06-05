@@ -15,7 +15,7 @@ const HeroSection = () => {
             <p className="mb-5">
               Achieve more with less effort. Our task management tool helps you prioritize and complete your tasks efficiently.
             </p>
-            <button className="btn btn-primary">Create Today</button>
+            <button className="bg-blue-600 p-3 rounded-md">Create Today</button>
           </div>
         </div>
       </div>

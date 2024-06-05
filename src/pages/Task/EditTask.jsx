@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 const EditTask = () => {
   const tasks = useLoaderData();
   console.log(tasks);
+  
   const {
     title: initialTitle,
     description: initialDescription,
@@ -27,6 +28,8 @@ const EditTask = () => {
 
   const handleSubmit = async (e) => {
     const token = localStorage.getItem('token');
+    console.log(token);
+
     e.preventDefault();
     const taskList = { title, description, status, priority };
 
