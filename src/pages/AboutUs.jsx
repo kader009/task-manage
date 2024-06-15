@@ -7,8 +7,8 @@ const AboutUs = () => {
           <p className="text-lg text-gray-600 dark:text-gray-400">
             Learn more about our company, mission, and the team behind TaskHub.
           </p>
-        </div>
-
+        </div> 
+{/* this is just a simple add */}
         <section className="mb-16">
           <h2 className="text-3xl font-semibold mb-6">Our Company</h2>
           <p className="text-gray-600 dark:text-gray-400 mb-4">
