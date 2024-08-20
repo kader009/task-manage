@@ -17,6 +17,7 @@ const NewsletterSection = () => {
                 type="email"
                 placeholder="Enter your email"
                 className="w-full px-4 py-2 text-gray-900 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                required
               />
               <button
                 type="submit"
