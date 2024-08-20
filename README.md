@@ -38,4 +38,4 @@
 
 > step 3. npm i
 
-` step 4. npm run dev it will be run with your local machine.`
+` step 4. run npm run dev it will be run with your local machine.`

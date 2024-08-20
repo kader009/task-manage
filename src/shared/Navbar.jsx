@@ -13,10 +13,7 @@ const Navbar = () => {
       <div className="flex-none gap-2">
         {/* Mobile Menu */}
         <div className="dropdown dropdown-end lg:hidden">
-          <button
-            tabIndex={0}
-            className="btn btn-ghost btn-circle"
-          >
+          <button tabIndex={0} className="btn btn-ghost btn-circle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -35,21 +32,34 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about-us">About Us</Link></li>
-            <li><Link to="/contact-us">Contact Us</Link></li>
-            <li><Link to="/dashboard">Dashboard</Link></li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about-us">About Us</Link>
+            </li>
+            <li>
+              <Link to="/contact-us">Contact Us</Link>
+            </li>
+            <li>
+              <Link to="/dashboard">Dashboard</Link>
+            </li>
             {user ? (
               <>
                 <li>
-                  <button onClick={logOut} className="bg-black text-white flex justify-center items-center">
+                  <button
+                    onClick={logOut}
+                    className="bg-black text-white flex justify-center items-center"
+                  >
                     Logout
                   </button>
                 </li>
               </>
             ) : (
               <>
-                <li><Link to="/login">Login</Link></li>
+                <li>
+                  <Link to="/login">Login</Link>
+                </li>
               </>
             )}
           </ul>
@@ -58,10 +68,18 @@ const Navbar = () => {
         {/* PC Menu */}
         <div className="hidden lg:flex items-center gap-2">
           <ul className="menu menu-horizontal p-0">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about-us">About Us</Link></li>
-            <li><Link to="/contact-us">Contact Us</Link></li>
-            <li><Link to="/dashboard">Dashboard</Link></li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about-us">About Us</Link>
+            </li>
+            <li>
+              <Link to="/contact-us">Contact Us</Link>
+            </li>
+            <li>
+              <Link to="/dashboard">Dashboard</Link>
+            </li>
             {user ? (
               <>
                 <li>
@@ -72,7 +90,9 @@ const Navbar = () => {
               </>
             ) : (
               <>
-                <li><Link to="/login">Login</Link></li>
+                <li>
+                  <Link to="/login">Login</Link>
+                </li>
               </>
             )}
           </ul>
@@ -97,7 +117,9 @@ const Navbar = () => {
                 tabIndex={0}
                 className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
               >
-                <li><Link to="dashboard/profile">Profile</Link></li>
+                <li>
+                  <Link to="dashboard/profile">Profile</Link>
+                </li>
                 <li>
                   <button onClick={logOut} className="bg-blue-600 text-white">
                     Logout

@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div>
-      <footer className="footer p-10 bg-base-300 text-base-content">
+      <footer className="footer p-10 bg-base-300 text-base-content"> 
         <nav>
           <h6 className="font-bold text-black">Services</h6>
           <a className="text-black">Branding</a>
@@ -52,7 +52,9 @@ const Footer = () => {
             </a>
           </div>
         </nav>
-          <h3 className="font-bold text-black">© 2024 All rights reserved and copy right by Abdul kader</h3>
+        <h3 className="font-bold text-black">
+          © 2024 All rights reserved and copy right by Abdul kader
+        </h3>
       </footer>
     </div>
   );
