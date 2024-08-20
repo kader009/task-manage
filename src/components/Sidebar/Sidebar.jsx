@@ -25,13 +25,6 @@ const menuItems = [
     path: 'alltask',
   },
   { key: '3', icon: <TagFilled />, label: 'Add Task', path: 'addtask' },
-  {
-    key: '4',
-    icon: <RollbackOutlined />,
-    label: 'Roles & Users',
-    path: 'roles-user',
-  },
-  { key: '5', icon: <SettingFilled />, label: 'Settings', path: 'settings' },
 ];
 
 const Sidebar = () => {

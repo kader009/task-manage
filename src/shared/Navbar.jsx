@@ -42,7 +42,7 @@ const Navbar = () => {
             {user ? (
               <>
                 <li>
-                  <button onClick={logOut} className="btn btn-primary">
+                  <button onClick={logOut} className="bg-black text-white flex justify-center items-center">
                     Logout
                   </button>
                 </li>
@@ -50,7 +50,6 @@ const Navbar = () => {
             ) : (
               <>
                 <li><Link to="/login">Login</Link></li>
-                <li><Link to="/register">SignUp</Link></li>
               </>
             )}
           </ul>
@@ -66,7 +65,7 @@ const Navbar = () => {
             {user ? (
               <>
                 <li>
-                  <button onClick={logOut} className="btn btn-primary">
+                  <button onClick={logOut} className="bg-black text-white">
                     Logout
                   </button>
                 </li>
@@ -74,7 +73,6 @@ const Navbar = () => {
             ) : (
               <>
                 <li><Link to="/login">Login</Link></li>
-                <li><Link to="/register">SignUp</Link></li>
               </>
             )}
           </ul>
@@ -85,12 +83,12 @@ const Navbar = () => {
                 role="button"
                 className="btn btn-ghost btn-circle avatar"
               >
-                <div className="w-10 rounded-full">
+                <div className="w-12 rounded-full">
                   <img
                     alt="User Avatar"
                     src={
                       user?.photoURL ||
-                      'https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg'
+                      'https://templates.joomla-monster.com/joomla30/jm-news-portal/components/com_djclassifieds/assets/images/default_profile.png'
                     }
                   />
                 </div>
@@ -99,9 +97,9 @@ const Navbar = () => {
                 tabIndex={0}
                 className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
               >
-                <li><Link to="/profile">Profile</Link></li>
+                <li><Link to="dashboard/profile">Profile</Link></li>
                 <li>
-                  <button onClick={logOut} className="btn btn-primary">
+                  <button onClick={logOut} className="btn btn-primary text-white">
                     Logout
                   </button>
                 </li>

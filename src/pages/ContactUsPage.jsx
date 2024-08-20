@@ -22,17 +22,20 @@ const ContactUsPage = () => {
                 type="text"
                 placeholder="Your Name"
                 className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700"
+                required
               />
               <input
                 type="email"
                 placeholder="Your Email"
                 className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700"
+                required
               />
             </div>
             <textarea
               placeholder="Your Message"
               className="w-full mt-8 p-3 rounded-lg border border-gray-300 dark:border-gray-700"
               rows="5"
+              required
             />
             <button
               type="submit"
