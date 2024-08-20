@@ -24,6 +24,11 @@ const AddTask = () => {
         const data = await response.json();
         console.log(data);
         toast.success('Tasks added successfully!');
+
+        setTitle('');
+        setDescription('');
+        setStatus('');
+        setPriority('');
       } else {
         toast.error('Failed to add tasks.');
       }
