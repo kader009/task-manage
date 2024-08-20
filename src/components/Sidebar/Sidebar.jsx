@@ -25,13 +25,14 @@ const menuItems = [
     path: 'alltask',
   },
   { key: '3', icon: <TagFilled />, label: 'Add Task', path: 'addtask' },
+  { key: '4', icon: <TagFilled />, label: 'Content', path: 'content' },
 ];
 
 const Sidebar = () => {
   const { logOut, user } = useAuth();
   return (
     <div>
-      <Sider style={{ height: '100vh' }} breakpoint="lg" collapsedWidth="0">
+      <Sider style={{ height: '120vh' }} breakpoint="lg" collapsedWidth="0">
         <div className="demo-logo-vertical" />
         <div
           style={{
@@ -50,7 +51,7 @@ const Sidebar = () => {
             </Menu.Item>
           ))}
         </Menu>
-        <div className="ms-6">
+        <div className="ms-6 mt-4">
           <button
             onClick={logOut}
             className="px-14 py-2 rounded bg-blue-500 text-white"
