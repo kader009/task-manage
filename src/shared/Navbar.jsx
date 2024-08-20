@@ -65,7 +65,7 @@ const Navbar = () => {
             {user ? (
               <>
                 <li>
-                  <button onClick={logOut} className="bg-black text-white">
+                  <button onClick={logOut} className="bg-blue-600 text-white">
                     Logout
                   </button>
                 </li>
@@ -99,7 +99,7 @@ const Navbar = () => {
               >
                 <li><Link to="dashboard/profile">Profile</Link></li>
                 <li>
-                  <button onClick={logOut} className="btn btn-primary text-white">
+                  <button onClick={logOut} className="bg-blue-600 text-white">
                     Logout
                   </button>
                 </li>

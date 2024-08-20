@@ -79,7 +79,7 @@ const PricingSection = () => {
                 Daily Update
               </li>
             </ul>
-            <button className="btn btn-primary w-full">Get Started</button>
+            <button className="btn bg-blue-600 text-white w-full">Get Started</button>
           </div>
 
           <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
@@ -150,7 +150,7 @@ const PricingSection = () => {
                 Priority Support
               </li>
             </ul>
-            <button className="btn btn-primary w-full">Get Started</button>
+            <button className="btn bg-blue-600 text-white w-full">Get Started</button>
           </div>
 
           <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
@@ -221,7 +221,7 @@ const PricingSection = () => {
                 24/7 Support
               </li>
             </ul>
-            <button className="btn btn-primary w-full">Get Started</button>
+            <button className="btn bg-blue-600 text-white w-full">Get Started</button>
           </div>
         </div>
       </div>
