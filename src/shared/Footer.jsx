@@ -3,20 +3,20 @@ const Footer = () => {
     <div>
       <footer className="footer p-10 bg-base-300 text-base-content"> 
         <nav>
-          <h6 className="font-bold text-black">Services</h6>
+          <h6 className="font-bold text-[#333333]">Services</h6>
           <a className="text-black">Branding</a>
           <a className="text-black">Design</a>
           <a className="text-black">Marketing</a>
         </nav>
         <nav>
-          <h6 className="font-bold text-black">Company</h6>
+          <h6 className="font-bold text-[#333333]">Company</h6>
           <a className="text-black">About us</a>
           <a className="text-black">Contact</a>
           <a className="text-black">Jobs</a>
         </nav>
         <nav>
-          <h6 className="font-bold text-black">Social</h6>
-          <div className="grid grid-flow-col gap-4 text-black">
+          <h6 className="font-bold text-[#333333]">Social</h6>
+          <div className="grid grid-flow-col gap-4 text-[#333333]">
             <a href="https://x.com/Bulletinkader">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,7 @@ const Footer = () => {
             </a>
           </div>
         </nav>
-        <h3 className="font-bold text-black">
+        <h3 className="font-bold text-[#333333]">
           © 2024 All rights reserved and copy right by Abdul kader
         </h3>
       </footer>
