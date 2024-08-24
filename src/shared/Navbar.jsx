@@ -4,7 +4,7 @@ import useAuth from '../hooks/useAuth';
 const Navbar = () => {
   const { logOut, user } = useAuth();
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 sticky top-0">
       <div className="flex-1">
         <Link to="/" className="btn btn-ghost normal-case text-xl">
           TaskHub
@@ -49,7 +49,7 @@ const Navbar = () => {
                 <li>
                   <button
                     onClick={logOut}
-                    className="bg-black text-white flex justify-center items-center"
+                    className="bg-blue-600 text-white flex justify-center items-center"
                   >
                     Logout
                   </button>
@@ -121,7 +121,7 @@ const Navbar = () => {
                   <Link to="dashboard/profile">Profile</Link>
                 </li>
                 <li>
-                  <button onClick={logOut} className="bg-blue-600 text-white">
+                  <button onClick={logOut} className="bg-blue-600 text-white flex justify-center items-center">
                     Logout
                   </button>
                 </li>
