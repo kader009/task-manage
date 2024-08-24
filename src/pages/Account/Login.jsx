@@ -116,7 +116,7 @@ const Login = () => {
             </svg>
             Register with Google
           </button>
-          <button onClick={handleGithub} className="w-full flex items-center justify-center bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-900 transition">
+          <button onClick={handleGithub} className="w-full flex items-center justify-center bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-900 transition dark:bg-black">
             <svg
               className="w-6 h-6 mr-2"
               fill="currentColor"

@@ -1,22 +1,22 @@
 const Footer = () => {
   return (
     <div>
-      <footer className="footer p-10 bg-base-300 text-base-content"> 
+      <footer className="dark:bg-gray-800  footer p-10 bg-base-300 text-base-content"> 
         <nav>
-          <h6 className="font-bold text-[#333333]">Services</h6>
-          <a className="text-black">Branding</a>
-          <a className="text-black">Design</a>
-          <a className="text-black">Marketing</a>
+          <h6 className="font-bold text-[#333333] dark:text-white">Services</h6>
+          <a className="text-black dark:text-gray-300">Branding</a>
+          <a className="text-black dark:text-gray-300">Design</a>
+          <a className="text-black dark:text-gray-300">Marketing</a>
         </nav>
         <nav>
-          <h6 className="font-bold text-[#333333]">Company</h6>
-          <a className="text-black">About us</a>
-          <a className="text-black">Contact</a>
-          <a className="text-black">Jobs</a>
+          <h6 className="font-bold text-[#333333] dark:text-white">Company</h6>
+          <a className="text-black dark:text-gray-300">About us</a>
+          <a className="text-black dark:text-gray-300">Contact</a>
+          <a className="text-black dark:text-gray-300">Jobs</a>
         </nav>
         <nav>
-          <h6 className="font-bold text-[#333333]">Social</h6>
-          <div className="grid grid-flow-col gap-4 text-[#333333]">
+          <h6 className="font-bold text-[#333333] dark:text-white">Social</h6>
+          <div className="grid grid-flow-col gap-4 text-[#333333] dark:text-gray-300">
             <a href="https://x.com/Bulletinkader">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,7 @@ const Footer = () => {
             </a>
           </div>
         </nav>
-        <h3 className="font-bold text-[#333333]">
+        <h3 className="font-bold text-[#333333] dark:text-white">
           © 2024 All rights reserved and copy right by Abdul kader
         </h3>
       </footer>
