@@ -59,7 +59,7 @@ const TestimonialsSection = () => {
         <Slider {...settings}>
           {testimonials.map((testimonial, index) => (
             <div key={index} className="px-4">
-              <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
+              <div className="bg-white dark:bg-gray-800 p-12 rounded-lg shadow-lg">
                 <div className="flex items-center mb-4">
                   <img
                     className="w-12 h-12 rounded-full"

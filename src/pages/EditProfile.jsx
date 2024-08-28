@@ -53,7 +53,7 @@ const EditProfile = () => {
               name="email"
               defaultValue={user?.email}
               placeholder="Enter your email"
-              className="input input-bordered w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="input input-bordered w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
               required
             />
           </div>
@@ -65,7 +65,7 @@ const EditProfile = () => {
               name="name"
               defaultValue={user?.name}
               placeholder="Enter your name"
-              className="input input-bordered w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="input input-bordered w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
               required
             />
           </div>
@@ -77,7 +77,7 @@ const EditProfile = () => {
               name="password"
               placeholder="Enter new password"
               type="password"
-              className="input input-bordered w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="input input-bordered w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
             />
           </div>
           <div className="form-control mt-6">
