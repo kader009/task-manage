@@ -2,48 +2,46 @@ const Content = () => {
   return (
     <div className="p-6">
       <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold mb-6">Welcome to Our Content Page</h1>
+        <h1 className="text-2xl font-bold mb-6">Welcome to TaskHub</h1>
         <p className="text-gray-700 mb-4">
-          At our company, we are committed to delivering exceptional products
-          and services that meet your needs and exceed your expectations. Our
-          dedicated team works tirelessly to ensure that every aspect of our
-          offerings is carefully crafted to provide you with the best possible
-          experience.
+          TaskHub is your go-to platform for efficient task management, designed
+          to help you stay organized and productive. Whether you're managing
+          personal tasks or collaborating on team projects, TaskHub provides the
+          tools you need to succeed.
         </p>
         <p className="text-gray-700 mb-4">
-          We believe in the power of innovation and strive to stay ahead of
-          industry trends. By continuously improving our processes and embracing
-          new technologies, we aim to offer solutions that are not only
-          effective but also future-proof.
+          Our mission is to simplify your workflow by offering a seamless
+          experience that adapts to your unique needs. With intuitive features
+          and a user-friendly interface, TaskHub allows you to focus on what
+          matters most: getting things done.
         </p>
         <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold mb-4">Key Points</h2>
+          <h2 className="text-2xl font-semibold mb-4">Why Choose TaskHub?</h2>
           <ul className="list-disc list-inside pl-5">
             <li className="mb-2">
-              Our products are designed with the latest technology to ensure
-              high performance and reliability.
+              Efficient task tracking with customizable labels, deadlines, and
+              reminders.
             </li>
             <li className="mb-2">
-              We offer comprehensive customer support to assist you with any
-              inquiries or issues.
+              Collaborative tools that make teamwork easier and more effective.
             </li>
             <li className="mb-2">
-              Our commitment to sustainability means we continually seek ways to
-              reduce our environmental impact.
+              Secure cloud storage to ensure your data is safe and accessible.
             </li>
           </ul>
         </div>
         <section className="mt-6">
           <h2 className="text-2xl font-semibold mb-4">
-            Additional Information
+            Get Started with TaskHub
           </h2>
           <p className="text-gray-700 mb-4">
-            For more details about our products and services, please visit our
-            website or contact our support team. We are here to help you make
-            the most of our offerings and ensure your satisfaction.
+            Ready to take control of your tasks? Sign up today and start
+            organizing your workflow like never before. If you have any
+            questions, our support team is here to assist you every step of the
+            way.
           </p>
           <a href="#" className="text-blue-500 hover:underline">
-            Learn more
+            Learn more about TaskHub
           </a>
         </section>
       </div>

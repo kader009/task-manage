@@ -2,8 +2,7 @@ import { Layout, Menu } from 'antd';
 import { Link } from 'react-router-dom';
 import {
   UserOutlined,
-  SettingFilled,
-  RollbackOutlined,
+  ControlFilled,
   TagFilled,
   TaobaoCircleFilled,
 } from '@ant-design/icons';
@@ -25,7 +24,7 @@ const menuItems = [
     path: 'alltask',
   },
   { key: '3', icon: <TagFilled />, label: 'Add Task', path: 'addtask' },
-  { key: '4', icon: <TagFilled />, label: 'Content', path: 'content' },
+  { key: '4', icon: <ControlFilled />, label: 'Content', path: 'content' },
 ];
 
 const Sidebar = () => {
