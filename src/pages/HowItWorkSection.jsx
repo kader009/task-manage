@@ -10,7 +10,7 @@ const HowItWorksSection = () => {
             Follow these simple steps to start managing your tasks efficiently.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
             <div className="flex items-center justify-center mb-4">
               <div className="bg-blue-500 text-white p-4 rounded-full">
