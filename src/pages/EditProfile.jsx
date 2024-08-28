@@ -81,8 +81,8 @@ const EditProfile = () => {
             />
           </div>
           <div className="form-control mt-6">
-            <button className="btn btn-primary w-full py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
-              Update
+            <button className="w-full py-3 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              Update Now
             </button>
           </div>
         </form>
