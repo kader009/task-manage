@@ -17,7 +17,7 @@ const AllTask = () => {
   const Filter = (event) => {
     setRecords(
       tasks.filter((tsk) =>
-        tsk.title.toLowerCase().includes(event.target.value)
+        tsk.title.toLowerCase().includes(event.target.value.toLowerCase())
       )
     );
   };
@@ -39,9 +39,15 @@ const AllTask = () => {
         />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {records.map((task) => (
-          <SingleTask key={task._id} task={task} handleUpdate={handleUpdate} />
-        ))}
+        {records.length > 0 ? (
+          records.map((task) => (
+            <SingleTask key={task._id} task={task} handleUpdate={handleUpdate} />
+          ))
+        ) : (
+          <p className="text-black col-span-full text-center">
+            No tasks found
+          </p>
+        )}
       </div>
     </div>
   );
