@@ -2,19 +2,19 @@ const Footer = () => {
   return (
       <footer className="dark:bg-gray-800 footer p-10 bg-base-300 text-base-content flex flex-wrap justify-between items-center"> 
         <nav>
-          <h6 className="font-bold text-[#333333] dark:text-white">Services</h6>
+          <h6 className="font-semibold text-[#333333] dark:text-white">Services</h6>
           <a className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Branding</a>
           <a className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Design</a>
           <a className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Marketing</a>
         </nav>
         <nav>
-          <h6 className="font-bold text-[#333333] dark:text-white">Company</h6>
+          <h6 className="font-semibold text-[#333333] dark:text-white">Company</h6>
           <a className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">About us</a>
           <a className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Contact</a>
           <a className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Jobs</a>
         </nav>
         <nav>
-          <h6 className="font-bold text-[#333333] dark:text-white">Social link</h6>
+          <h6 className="font-semibold text-[#333333] dark:text-white">Social link</h6>
           <div className="grid grid-flow-col gap-4 text-[#333333] dark:text-gray-300">
             <a href="https://x.com/Bulletinkader" className="hover:text-blue-500 dark:hover:text-blue-400">
               <svg
@@ -51,7 +51,7 @@ const Footer = () => {
             </a>
           </div>
         </nav>
-        <h3 className="font-bold text-[#333333] dark:text-white">
+        <h3 className="font-semibold text-[#333333] dark:text-white">
           © 2024 All rights reserved and copyright by Abdul Kader
         </h3>
       </footer>

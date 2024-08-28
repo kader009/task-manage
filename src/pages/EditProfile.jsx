@@ -59,7 +59,7 @@ const EditProfile = () => {
           </div>
           <div className="form-control mb-4">
             <label className="label mb-2">
-              <span className="text-black font-semibold">Name</span>
+              <span className="text-black font-semibold ">Name</span>
             </label>
             <input
               name="name"
@@ -71,7 +71,7 @@ const EditProfile = () => {
           </div>
           <div className="form-control mb-4">
             <label className="label mb-2">
-              <span className="text-black font-semibold">Password</span>
+              <span className="text-black font-semibold ">Password</span>
             </label>
             <input
               name="password"
