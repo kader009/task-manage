@@ -1,7 +1,6 @@
 const Footer = () => {
   return (
-    <div>
-      <footer className="dark:bg-gray-800  footer p-10 bg-base-300 text-base-content"> 
+      <footer className="dark:bg-gray-800  footer p-10 bg-base-300 text-base-content flex flex-wrap justify-between items-center"> 
         <nav>
           <h6 className="font-bold text-[#333333] dark:text-white">Services</h6>
           <a className="text-black dark:text-gray-300">Branding</a>
@@ -15,7 +14,7 @@ const Footer = () => {
           <a className="text-black dark:text-gray-300">Jobs</a>
         </nav>
         <nav>
-          <h6 className="font-bold text-[#333333] dark:text-white">Social</h6>
+          <h6 className="font-bold text-[#333333] dark:text-white">Social link</h6>
           <div className="grid grid-flow-col gap-4 text-[#333333] dark:text-gray-300">
             <a href="https://x.com/Bulletinkader">
               <svg
@@ -56,7 +55,6 @@ const Footer = () => {
           © 2024 All rights reserved and copy right by Abdul kader
         </h3>
       </footer>
-    </div>
   );
 };
 

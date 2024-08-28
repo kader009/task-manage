@@ -8,10 +8,10 @@ const FeaturesSection = () => {
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
             Discover the amazing features that will boost your productivity and
-            help you manage your tasks efficiently.
+            help you <br /> manage your tasks efficiently.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
             <div className="flex items-center justify-center mb-4">
               <span className="bg-blue-500 text-white p-3 rounded-full">

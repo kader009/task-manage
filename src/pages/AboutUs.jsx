@@ -5,7 +5,7 @@ const AboutUs = () => {
         <div className="text-center mb-12">
           <h1 className="text-3xl font-extrabold mb-4">About TaskHub</h1>
           <p className="text-lg text-gray-600 dark:text-gray-400">
-            Learn more about our company, mission, and the team behind TaskHub.
+            Learn more about our company, mission, and the team <br /> behind TaskHub.
           </p>
         </div> 
 {/* this is just a simple add */}

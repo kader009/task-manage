@@ -8,12 +8,15 @@ const SingleTask = ({ task, handleUpdate }) => {
     // const token = localStorage.getItem('token');
     // console.log(token);
     try {
-      const response = await fetch(`https://task-manage-backend-blush.vercel.app/tasks/${_id}`, {
-        method: 'DELETE',
-        // headers: {
-        //   authorization: `Bearer ${token}`,
-        // },
-      });
+      const response = await fetch(
+        `https://task-manage-backend-blush.vercel.app/tasks/${_id}`,
+        {
+          method: 'DELETE',
+          // headers: {
+          //   authorization: `Bearer ${token}`,
+          // },
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();
@@ -32,23 +35,21 @@ const SingleTask = ({ task, handleUpdate }) => {
 
   return (
     <div>
-      <div>
-        <div className="bg-white p-4 rounded-lg shadow-lg">
-          <p className="text-base font-bold">{title}</p>
-          <p>Description: {description}</p>
-          <p>Status: {status}</p>
-          <p>Priority: {priority}</p>
-          <div className="mt-4 space-x-2">
-            <button className="bg-blue-600 text-white py-1 px-3 rounded-md hover:bg-blue-700 transition">
-              <Link to={`edit/${_id}`}>Edit</Link>
-            </button>
-            <button
-              onClick={handleDelete}
-              className="bg-red-600 text-white py-1 px-3 rounded-md hover:bg-red-700 transition"
-            >
-              Delete
-            </button>
-          </div>
+      <div className="bg-white p-4 rounded-lg shadow-lg">
+        <p className="text-base font-bold">{title}</p>
+        <p className='truncate'>Description: {description}</p>
+        <p>Status: {status}</p>
+        <p>Priority: {priority}</p>
+        <div className="mt-4 space-x-2">
+          <button className="bg-blue-600 text-white py-1 px-3 rounded-md hover:bg-blue-700 transition">
+            <Link to={`edit/${_id}`}>Edit</Link>
+          </button>
+          <button
+            onClick={handleDelete}
+            className="bg-red-600 text-white py-1 px-3 rounded-md hover:bg-red-700 transition"
+          >
+            Delete
+          </button>
         </div>
       </div>
     </div>

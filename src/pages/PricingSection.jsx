@@ -10,7 +10,7 @@ const PricingSection = () => {
             Choose the plan that fits your needs.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
               Basic
