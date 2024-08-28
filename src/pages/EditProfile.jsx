@@ -1,9 +1,9 @@
-import { useLoaderData } from "react-router-dom";
-import { toast } from "react-toastify";
+import { useLoaderData } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const EditProfile = () => {
   const user = useLoaderData();
-  console.log(user); 
+  console.log(user);
 
   const Handlesubmit = async (e) => {
     // const token = localStorage.getItem('token')
@@ -16,14 +16,17 @@ const EditProfile = () => {
     console.log(userData);
 
     try {
-      const response = await fetch(`https://task-manage-backend-blush.vercel.app/user/${user?.email}`, {
-        method: 'PATCH',
-        headers: {
-          'Content-Type': 'application/json',
-          // authorization:`Bearer ${token}`
-        },
-        body: JSON.stringify(userData),
-      });
+      const response = await fetch(
+        `https://task-manage-backend-blush.vercel.app/user/${user?.email}`,
+        {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+            // authorization:`Bearer ${token}`
+          },
+          body: JSON.stringify(userData),
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();
@@ -38,62 +41,51 @@ const EditProfile = () => {
   };
 
   return (
-    <div>
-      <div className="hero h-[80vh]">
-        <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left">
-            <h1 className="text-2xl font-bold">Edit Your Profile</h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
+    <div className="flex justify-center items-center h-[80vh]">
+      <div className="bg-white shadow-lg rounded-lg w-full max-w-sm p-6">
+        <h2 className="text-2xl font-bold text-center mb-4">Update Profile</h2>
+        <form onSubmit={Handlesubmit}>
+          <div className="form-control mb-4">
+            <label className="label mb-2">
+              <span className="text-gray-700 font-semibold">Email</span>
+            </label>
+            <input
+              name="email"
+              defaultValue={user?.email}
+              placeholder="Enter your email"
+              className="input input-bordered w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
           </div>
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form onSubmit={Handlesubmit} className="card-body">
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Email</span>
-                </label>
-                <input
-                  name="email"
-                  defaultValue={user?.email}
-                  placeholder="email"
-                  className="input input-bordered"
-                  required
-                />
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Name</span>
-                </label>
-                <input
-                  name="name"
-                  defaultValue={user?.name}
-                  placeholder="name"
-                  className="input input-bordered"
-                  required
-                />
-                <label className="label">
-                  <span className="label-text">Password</span>
-                </label>
-                <input
-                  name="password"
-                  placeholder="password"
-                  className="input input-bordered"
-                />
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
-                </label>
-              </div>
-              <div className="form-control mt-6">
-                <button className="btn btn-primary">Submit Now</button>
-              </div>
-            </form>
+          <div className="form-control mb-4">
+            <label className="label mb-2">
+              <span className="text-gray-700 font-semibold">Name</span>
+            </label>
+            <input
+              name="name"
+              defaultValue={user?.name}
+              placeholder="Enter your name"
+              className="input input-bordered w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
           </div>
-        </div>
+          <div className="form-control mb-4">
+            <label className="label mb-2">
+              <span className="text-gray-700 font-semibold">Password</span>
+            </label>
+            <input
+              name="password"
+              placeholder="Enter new password"
+              type="password"
+              className="input input-bordered w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div className="form-control mt-6">
+            <button className="btn btn-primary w-full py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              Update
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
