@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div className="navbar bg-base-100 sticky top-0 z-10">
       <div className="flex-1">
-        <Link to="/" className=" normal-case text-xl">
+        <Link to="/" className=" normal-case text-xl font-semibold">
           TaskHub
         </Link>
       </div>
