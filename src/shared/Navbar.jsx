@@ -103,7 +103,7 @@ const Navbar = () => {
                 role="button"
                 className="btn btn-ghost btn-circle avatar"
               >
-                <div className="w-12 rounded-full">
+                <div className="w-11 rounded-full">
                   <img
                     alt="User Avatar"
                     src={
@@ -121,7 +121,10 @@ const Navbar = () => {
                   <Link to="dashboard/profile">Profile</Link>
                 </li>
                 <li>
-                  <button onClick={logOut} className="bg-blue-600 text-white flex justify-center items-center">
+                  <button
+                    onClick={logOut}
+                    className="bg-blue-600 text-white flex justify-center items-center"
+                  >
                     Logout
                   </button>
                 </li>
