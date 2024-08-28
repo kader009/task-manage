@@ -47,7 +47,7 @@ const EditProfile = () => {
         <form onSubmit={Handlesubmit}>
           <div className="form-control mb-4">
             <label className="label mb-2">
-              <span className="text-gray-700 font-semibold">Email</span>
+              <span className="text-black font-semibold">Email</span>
             </label>
             <input
               name="email"
@@ -59,7 +59,7 @@ const EditProfile = () => {
           </div>
           <div className="form-control mb-4">
             <label className="label mb-2">
-              <span className="text-gray-700 font-semibold">Name</span>
+              <span className="text-black font-semibold">Name</span>
             </label>
             <input
               name="name"
@@ -71,7 +71,7 @@ const EditProfile = () => {
           </div>
           <div className="form-control mb-4">
             <label className="label mb-2">
-              <span className="text-gray-700 font-semibold">Password</span>
+              <span className="text-black font-semibold">Password</span>
             </label>
             <input
               name="password"
@@ -81,7 +81,7 @@ const EditProfile = () => {
             />
           </div>
           <div className="form-control mt-6">
-            <button className="w-full py-3 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <button className="w-full py-3 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 text-base">
               Update Now
             </button>
           </div>

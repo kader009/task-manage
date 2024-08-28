@@ -10,8 +10,8 @@ const HeroSection = () => {
       >
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
-          <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold dark:text-white">TaskHub</h1>
+          <div className="max-w-md text-white">
+            <h1 className="mb-5 text-5xl font-bold dark:text-white ">TaskHub</h1>
             <p className="mb-5 dark:text-gray-300">
               Achieve more with less effort. Our task management tool helps you prioritize and complete your tasks efficiently.
             </p>

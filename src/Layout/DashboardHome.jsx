@@ -35,7 +35,7 @@ const DashboardHome = () => {
           <Col xs={24} sm={12} lg={8} key={task.id}>
             <Card>
               <Title level={4}>{task.title}</Title>
-              <Text>Status: {task.status}</Text>
+              <Text className='text-base'>Status: {task.status}</Text>
             </Card>
           </Col>
         ))}
