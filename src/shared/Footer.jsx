@@ -9,7 +9,7 @@ const Footer = () => {
         </nav>
         <nav>
           <h6 className="font-semibold text-[#000] dark:text-white">Company</h6>
-          <a className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">About us</a>
+          <a className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 ">About us</a>
           <a className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Contact</a>
           <a className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Jobs</a>
         </nav>
