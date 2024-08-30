@@ -16,32 +16,23 @@ import {
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
 
-const themes = {
-  dark: {
-    backgroundColor: 'black',
-    color: 'white',
-  },
-  light: {
-    backgroundColor: 'white',
-    color: 'black',
-  },
-};
-
 const AuthProvider = ({ children }) => {
-  const [isDark, SetDark] = useState(false)
+  const [isDark, SetDark] = useState(false);
   const [user, Setuser] = useState(null);
   const [loading, SetLoading] = useState(true);
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
   const facebookProvider = new FacebookAuthProvider();
 
-  const theme = isDark ? themes.dark : themes.light;
-  const toggleTheme = () =>{
-    SetDark(!isDark)
-  }
+  const toggleTheme = () => {
+    SetDark((prevMode) => !prevMode);
+  };
 
+  const theme = isDark ? 'dark' : 'light';
 
-
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [isDark]);
 
   const Createuser = (email, password) => {
     SetLoading(true);
@@ -95,8 +86,7 @@ const AuthProvider = ({ children }) => {
     githubLogin,
     facebookLogin,
     theme,
-    isDark,
-    toggleTheme
+    toggleTheme,
   };
 
   return (

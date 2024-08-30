@@ -2,7 +2,10 @@ import { Link } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 
 const Navbar = () => {
-  const { logOut, user } = useAuth();
+  const { logOut, user, theme, toggleTheme } = useAuth();
+  const toggleMode = () => {
+    toggleTheme();
+  };
   return (
     <div className="navbar bg-base-100 sticky top-0 z-10">
       <div className="flex-1">
