@@ -4,13 +4,21 @@ import SingleTask from './SingleTask';
 const AllTask = () => {
   const [tasks, setTasks] = useState([]);
   const [records, setRecords] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     fetch('https://task-manage-backend-blush.vercel.app/tasks')
       .then((res) => res.json())
       .then((data) => {
         setTasks(data);
         setRecords(data);
+      })
+      .catch((error) => {
+        console.error('Error fetching tasks:', error);
+      })
+      .finally(() => {
+        setLoading(false);
       });
   }, []);
 
@@ -38,15 +46,20 @@ const AllTask = () => {
           placeholder="Search Title"
         />
       </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {records.length > 0 ? (
+        {loading ? (
+          <p className="text-black col-span-full text-center">Loading...</p>
+        ) : records.length > 0 ? (
           records.map((task) => (
-            <SingleTask key={task._id} task={task} handleUpdate={handleUpdate} />
+            <SingleTask
+              key={task._id}
+              task={task}
+              handleUpdate={handleUpdate}
+            />
           ))
         ) : (
-          <p className="text-black col-span-full text-center">
-            No tasks found
-          </p>
+          <p className="text-black col-span-full text-center">No tasks found</p>
         )}
       </div>
     </div>
