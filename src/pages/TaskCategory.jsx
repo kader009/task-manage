@@ -4,9 +4,9 @@ const TaskCategory = () => {
   // Sample task categories
   const categories = [
     { id: 1, name: 'Work', color: 'bg-blue-500' },
-    { id: 2, name: 'Personal', color: 'bg-green-500' },
-    { id: 3, name: 'Urgent', color: 'bg-yellow-500' },
-    { id: 4, name: 'Completed', color: 'bg-gray-500' },
+    { id: 2, name: 'Personal', color: 'bg-black' },
+    { id: 3, name: 'Urgent', color: 'bg-blue-600' },
+    { id: 4, name: 'Completed', color: 'bg-gray-600' },
   ];
 
   // Sample tasks
