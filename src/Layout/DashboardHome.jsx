@@ -27,7 +27,7 @@ const DashboardHome = () => {
     { id: 2, title: 'Task 2', status: 'Completed' },
     { id: 3, title: 'Task 3', status: 'Pending' },
   ];
-  
+
   return (
     <div className="mx-4 my-4">
       <Row gutter={[16, 16]} className="mt-4 mb-4">
@@ -35,7 +35,7 @@ const DashboardHome = () => {
           <Col xs={24} sm={12} lg={8} key={task.id}>
             <Card>
               <Title level={4}>{task.title}</Title>
-              <Text className='text-base'>Status: {task.status}</Text>
+              <Text className="text-base">Status: {task.status}</Text>
             </Card>
           </Col>
         ))}
@@ -44,7 +44,7 @@ const DashboardHome = () => {
       <Row gutter={[16, 16]}>
         <Col span={24}>
           <Card>
-            <Title level={3}>Task Overview</Title>
+            <Title level={3}>Task Overviews</Title>
             <ResponsiveContainer width="100%" height={300}>
               <LineChart
                 data={data}
