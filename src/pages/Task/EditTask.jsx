@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 const EditTask = () => {
   const tasks = useLoaderData();
   console.log(tasks);
-  
+
   const {
     title: initialTitle,
     description: initialDescription,
@@ -31,13 +31,16 @@ const EditTask = () => {
     const taskList = { title, description, status, priority };
 
     try {
-      const response = await fetch(`https://task-manage-backend-blush.vercel.app/tasks/${_id}`, {
-        method: 'PATCH',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(taskList),
-      });
+      const response = await fetch(
+        `https://task-manage-backend-blush.vercel.app/tasks/${_id}`,
+        {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(taskList),
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();
@@ -54,7 +57,9 @@ const EditTask = () => {
   return (
     <div className="flex justify-center items-center">
       <div className="w-full max-w-lg p-6 bg-white rounded-lg shadow-md">
-        <h1 className="my-3 text-2xl font-semibold text-center">Edit Your Task</h1>
+        <h1 className="my-3 text-2xl font-semibold text-center">
+          Edit Your Task
+        </h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label
