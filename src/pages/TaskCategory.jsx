@@ -5,7 +5,7 @@ const TaskCategory = () => {
   const categories = [
     { id: 1, name: 'Work', color: 'bg-blue-500' },
     { id: 2, name: 'Personal', color: 'bg-green-500' },
-    { id: 3, name: 'Urgent', color: 'bg-red-500' },
+    { id: 3, name: 'Urgent', color: 'bg-yellow-500' },
     { id: 4, name: 'Completed', color: 'bg-gray-500' },
   ];
 
@@ -30,7 +30,7 @@ const TaskCategory = () => {
 
   return (
     <div className="container mx-auto p-6">
-      <h2 className="text-2xl font-semibold mb-4 text-center">
+      <h2 className="text-2xl font-bold mb-4 text-center">
         Task Categories
       </h2>
 
@@ -67,7 +67,7 @@ const TaskCategory = () => {
           filteredTasks.map((task) => (
             <div
               key={task.id}
-              className="bg-white shadow-lg rounded-lg p-4 border-b-8 border-blue-400 hover:shadow-xl transition-all duration-300"
+              className="bg-white shadow-lg rounded-lg p-4 border-l-8 border-blue-400 hover:shadow-xl transition-all duration-300"
             >
               <h3 className="text-lg font-semibold">{task.title}</h3>
               <p className="text-sm text-gray-500 mt-1">

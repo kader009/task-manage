@@ -5,12 +5,12 @@ import {
   ControlFilled,
   TagFilled,
   TaobaoCircleFilled,
+  TagsTwoTone,
 } from '@ant-design/icons';
 import useAuth from '../../hooks/useAuth';
 
 const { Sider } = Layout;
 
-// Define the menu items array in the Ant Design `items` structure
 const menuItems = [
   {
     key: '1',
@@ -30,12 +30,12 @@ const menuItems = [
   {
     key: '4',
     icon: <ControlFilled />,
-    label: <Link to="content">Content</Link>,
+    label: <Link to="task-category">Task Category</Link>,
   },
   {
     key: '5',
-    icon: <ControlFilled />,
-    label: <Link to="task-category">Task Category</Link>,
+    icon: <TagsTwoTone />,
+    label: <Link to="content">Content</Link>,
   },
 ];
 
