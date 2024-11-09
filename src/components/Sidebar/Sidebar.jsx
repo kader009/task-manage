@@ -10,25 +10,33 @@ import useAuth from '../../hooks/useAuth';
 
 const { Sider } = Layout;
 
+// Define the menu items array in the Ant Design `items` structure
 const menuItems = [
   {
     key: '1',
     icon: <UserOutlined />,
-    label: 'Profile Management',
-    path: 'profile',
+    label: <Link to="profile">Profile Management</Link>,
   },
   {
     key: '2',
     icon: <TaobaoCircleFilled />,
-    label: 'All Task',
-    path: 'alltask',
+    label: <Link to="alltask">All Task</Link>,
   },
-  { key: '3', icon: <TagFilled />, label: 'Add Task', path: 'addtask' },
-  { key: '4', icon: <ControlFilled />, label: 'Content', path: 'content' },
+  {
+    key: '3',
+    icon: <TagFilled />,
+    label: <Link to="addtask">Add Task</Link>,
+  },
+  {
+    key: '4',
+    icon: <ControlFilled />,
+    label: <Link to="content">Content</Link>,
+  },
 ];
 
 const Sidebar = () => {
   const { logOut, user } = useAuth();
+
   return (
     <div>
       <Sider style={{ height: '120vh' }} breakpoint="lg" collapsedWidth="0">
@@ -41,15 +49,15 @@ const Sidebar = () => {
             margin: '15px',
           }}
         >
-          <Link to={'/'}>TaskHub</Link>
+          <Link to="/">TaskHub</Link>
         </div>
-        <Menu theme="dark" mode="inline" defaultSelectedKeys={['0']}>
-          {menuItems.map((item) => (
-            <Menu.Item key={item.key} icon={item.icon}>
-              <Link to={item.path}>{item.label}</Link>
-            </Menu.Item>
-          ))}
-        </Menu>
+        {/* Use `items` prop instead of mapping each item with `<Menu.Item>` */}
+        <Menu
+          theme="dark"
+          mode="inline"
+          defaultSelectedKeys={['1']}
+          items={menuItems}
+        />
         <div className="ms-6 mt-4">
           <button
             onClick={logOut}
@@ -65,6 +73,7 @@ const Sidebar = () => {
                 user?.photoURL ||
                 'https://templates.joomla-monster.com/joomla30/jm-news-portal/components/com_djclassifieds/assets/images/default_profile.png'
               }
+              alt="User Avatar"
             />
           </div>
         </div>
