@@ -2,22 +2,25 @@ import { Link } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 
 const Navbar = () => {
-  const { logOut, user, theme, toggleTheme } = useAuth();
-  const toggleMode = () => {
-    toggleTheme();
-  };
+  const { logOut, user } = useAuth();
 
   return (
     <div className="navbar bg-base-100 sticky top-0 z-10 dark:bg-gray-900">
       <div className="flex-1">
-        <Link to="/" className=" normal-case text-xl font-semibold dark:text-white">
+        <Link
+          to="/"
+          className=" normal-case text-xl font-semibold dark:text-white"
+        >
           TaskHub
         </Link>
       </div>
       <div className="flex-none gap-2">
         {/* Mobile Menu */}
         <div className="dropdown dropdown-end lg:hidden">
-          <button tabIndex={0} className="btn btn-ghost btn-circle dark:text-white">
+          <button
+            tabIndex={0}
+            className="btn btn-ghost btn-circle dark:text-white"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
