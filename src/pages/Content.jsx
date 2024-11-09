@@ -5,7 +5,7 @@ const Content = () => {
         <h1 className="text-2xl font-bold mb-6">Welcome to TaskHub</h1>
         <p className="text-gray-700 mb-4">
           TaskHub is your go-to platform for efficient task management, designed
-          to help you stay organized and productive. Whether you're managing
+          to help you stay organized and productive. Whether you are managing
           personal tasks or collaborating on team projects, TaskHub provides the
           tools you need to succeed.
         </p>

@@ -32,6 +32,11 @@ const menuItems = [
     icon: <ControlFilled />,
     label: <Link to="content">Content</Link>,
   },
+  {
+    key: '5',
+    icon: <ControlFilled />,
+    label: <Link to="task-category">Task Category</Link>,
+  },
 ];
 
 const Sidebar = () => {

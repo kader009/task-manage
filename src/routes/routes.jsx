@@ -15,6 +15,7 @@ import PrivateRoute from './private/PrivateRoute';
 import EditTask from '../pages/Task/EditTask';
 import EditProfile from '../pages/EditProfile';
 import Content from '../pages/Content';
+import TaskCategory from '../pages/TaskCategory';
 
 const route = createBrowserRouter([
   {
@@ -88,6 +89,14 @@ const route = createBrowserRouter([
         element: (
           <PrivateRoute>
             <Content />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: 'task-category',
+        element: (
+          <PrivateRoute>
+            <TaskCategory />
           </PrivateRoute>
         ),
       },
