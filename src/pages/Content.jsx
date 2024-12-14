@@ -63,10 +63,10 @@ const Content = () => {
           </p>
           <div className="flex justify-center gap-4">
             <Link
-              to="/register"
+              to="/"
               className="bg-blue-500 text-white py-2 px-6 rounded-lg shadow-md hover:bg-blue-600 transition"
             >
-              Sign Up
+              Back Home
             </Link>
             <a
               href="#learn-more"
