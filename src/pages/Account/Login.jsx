@@ -34,7 +34,7 @@ const Login = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 max-w-md w-full">
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 max-w-md w-full my-6">
         <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white text-center mb-6">
           Login to TaskHub
         </h2>
