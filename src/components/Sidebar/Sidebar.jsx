@@ -76,7 +76,7 @@ const Sidebar = () => {
             <img
               src={
                 user?.photoURL ||
-                'https://www.rwjf.org/en/insights/blog/2022/02/black-men-who-care-are-the-role-models-we-need/_jcr_content/root/container_copy_copy_/social_sharing_conta/content/column_control/col-6-6-1/insetmediacontainer.coreimg.jpeg/1706902900015/d-curry-headshot.jpeg'
+                'https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0zMjgtMzY2LXRvbmctMDhfMS5qcGc.jpg'
               }
               alt="User Avatar"
             />
