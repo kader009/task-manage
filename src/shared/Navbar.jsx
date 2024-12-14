@@ -116,7 +116,7 @@ const Navbar = () => {
                     alt="User Avatar"
                     src={
                       user?.photoURL ||
-                      'https://templates.joomla-monster.com/joomla30/jm-news-portal/components/com_djclassifieds/assets/images/default_profile.png'
+                      'https://www.rwjf.org/en/insights/blog/2022/02/black-men-who-care-are-the-role-models-we-need/_jcr_content/root/container_copy_copy_/social_sharing_conta/content/column_control/col-6-6-1/insetmediacontainer.coreimg.jpeg/1706902900015/d-curry-headshot.jpeg'
                     }
                   />
                 </div>
