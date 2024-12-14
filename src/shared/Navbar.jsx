@@ -56,7 +56,7 @@ const Navbar = () => {
                 <li>
                   <button
                     onClick={logOut}
-                    className="bg-blue-600 text-white flex justify-center items-center"
+                    className="bg-blue-600 text-white flex justify-center items-center hover:bg-blue-700"
                   >
                     Logout
                   </button>
