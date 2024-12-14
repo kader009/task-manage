@@ -91,7 +91,7 @@ const Navbar = () => {
             {user ? (
               <>
                 <li>
-                  <button onClick={logOut} className="bg-blue-600 text-white">
+                  <button onClick={logOut} className="bg-blue-600 text-white hover:bg-blue-800">
                     Logout
                   </button>
                 </li>
