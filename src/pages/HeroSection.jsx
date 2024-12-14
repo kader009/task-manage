@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const HeroSection = () => {
   return (
     <div>
@@ -15,7 +17,7 @@ const HeroSection = () => {
             <p className="mb-5 dark:text-gray-300">
               Achieve more with less effort. Our task management tool helps you prioritize and complete your tasks efficiently.
             </p>
-            <button className="bg-blue-600 p-3 rounded-md dark:text-gray-300">Create Today</button>
+            <button className="bg-blue-600 p-3 rounded-md dark:text-gray-300"><Link to={'/dashboard/addtask'}>Create Today</Link></button>
           </div>
         </div>
       </div>
