@@ -79,21 +79,7 @@ const Register = () => {
                 placeholder="Enter your password"
               />
             </div>
-            <div className="flex items-center justify-between mb-4">
-              <label className="flex items-center text-gray-700 dark:text-gray-300">
-                <input
-                  type="checkbox"
-                  className="form-checkbox h-4 w-4 text-blue-600 dark:bg-gray-700 dark:border-gray-600"
-                />
-                <span className="ml-2">Remember me</span>
-              </label>
-              <a
-                href="#"
-                className="text-blue-600 dark:text-blue-400 hover:underline"
-              >
-                Forgot password?
-              </a>
-            </div>
+            
             <button
               type="submit"
               className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition"
