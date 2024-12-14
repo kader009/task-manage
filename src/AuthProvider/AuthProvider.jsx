@@ -32,7 +32,7 @@ const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
-  }, [isDark]);
+  }, [isDark, theme]);
 
   const Createuser = (email, password) => {
     SetLoading(true);

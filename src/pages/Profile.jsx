@@ -22,7 +22,7 @@ const ProfilePage = () => {
           </h2>
           <div className="flex justify-center mb-4">
             <img
-              src={user.photoURL}
+              src={user.photoURL || 'https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0zMjgtMzY2LXRvbmctMDhfMS5qcGc.jpg'}
               alt="Profile Picture"
               className="w-24 h-24 rounded-full"
             />
@@ -30,7 +30,7 @@ const ProfilePage = () => {
           <div className="mb-4">
             <p>
               <span className="text-base font-semibold">Name: </span>
-              {user?.displayName}
+              {user?.displayName || "Abdul kader" }
             </p>
             <p>
               <span className="text-base font-semibold">Email: </span>
