@@ -30,7 +30,7 @@ const ProfilePage = () => {
           <div className="mb-4">
             <p>
               <span className="text-base font-semibold">Name: </span>
-              {user?.displayName || "Abul Hasan" }
+              {user?.displayName || "Md Abul Kalam Azad" }
             </p>
             <p>
               <span className="text-base font-semibold">Email: </span>
