@@ -38,7 +38,7 @@ const ProfilePage = () => {
             </p>
           </div>
           <button className="mt-4 w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
-            <Link to={`edit-profile/${userInfo?._id}`}>Edit Profile</Link>
+            <Link to={`edit-profile/${userInfo?._id}`}>Update Profile</Link>
           </button>
         </div>
       </div>
