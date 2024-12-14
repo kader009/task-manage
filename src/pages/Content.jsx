@@ -1,51 +1,83 @@
+import { Link } from 'react-router-dom';
+
 const Content = () => {
   return (
-    <div className="p-6">
-      <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-2xl font-bold mb-6">Welcome to TaskHub</h1>
-        <p className="text-gray-700 mb-4">
-          TaskHub is your go-to platform for efficient task management, designed
-          to help you stay organized and productive. Whether you are managing
-          personal tasks or collaborating on team projects, TaskHub provides the
-          tools you need to succeed.
-        </p>
-        <p className="text-gray-700 mb-4">
-          Our mission is to simplify your workflow by offering a seamless
-          experience that adapts to your unique needs. With intuitive features
-          and a user-friendly interface, TaskHub allows you to focus on what
-          matters most: getting things done.
-        </p>
-        <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold mb-4">Why Choose TaskHub?</h2>
-          <ul className="list-disc list-inside pl-5">
-            <li className="mb-2">
-              Efficient task tracking with customizable labels, deadlines, and
-              reminders.
+    <section className="p-8">
+      {/* Main Container */}
+      <div className="max-w-5xl mx-auto bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg">
+        {/* Title Section */}
+        <div className="text-center mb-8">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">
+            Welcome to <span className="text-blue-500">TaskHub</span>
+          </h1>
+          <p className="text-gray-600 dark:text-gray-300 text-lg">
+            Simplify, organize, and collaborate—TaskHub is built for you.
+          </p>
+        </div>
+
+        {/* Introduction */}
+        <div className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+          <p className="mb-4">
+            TaskHub is your ultimate task management platform designed to help
+            individuals and teams stay productive. Whether you are tracking
+            personal goals or managing complex team projects, we provide
+            intuitive tools that streamline your workflow.
+          </p>
+          <p>
+            With a modern, user-friendly interface and powerful features,
+            TaskHub adapts to your needs so you can focus on what truly matters:
+            achieving your goals.
+          </p>
+        </div>
+
+        {/* Feature Highlights */}
+        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md mb-6">
+          <h2 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4 text-center">
+            Why Choose TaskHub?
+          </h2>
+          <ul className="space-y-3 text-gray-700 dark:text-gray-300 list-disc list-inside">
+            <li>
+              <span className="font-semibold text-blue-500">Customizable </span>
+              task labels, deadlines, and reminders for seamless tracking.
             </li>
-            <li className="mb-2">
-              Collaborative tools that make teamwork easier and more effective.
+            <li>
+              Collaborative tools that simplify teamwork and enhance
+              productivity.
             </li>
-            <li className="mb-2">
-              Secure cloud storage to ensure your data is safe and accessible.
+            <li>
+              Secure cloud storage ensures your data is always safe and
+              accessible anywhere.
             </li>
           </ul>
         </div>
-        <section className="mt-6">
-          <h2 className="text-2xl font-semibold mb-4">
-            Get Started with TaskHub
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <h2 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
+            Get Started Today
           </h2>
-          <p className="text-gray-700 mb-4">
-            Ready to take control of your tasks? Sign up today and start
-            organizing your workflow like never before. If you have any
-            questions, our support team is here to assist you every step of the
-            way.
+          <p className="text-gray-600 dark:text-gray-300 mb-6">
+            Take control of your tasks and streamline your workflow with
+            TaskHub. Sign up today and experience task management like never
+            before.
           </p>
-          <a href="#" className="text-blue-500 hover:underline">
-            Learn more about TaskHub
-          </a>
-        </section>
+          <div className="flex justify-center gap-4">
+            <Link
+              to="/register"
+              className="bg-blue-500 text-white py-2 px-6 rounded-lg shadow-md hover:bg-blue-600 transition"
+            >
+              Sign Up
+            </Link>
+            <a
+              href="#learn-more"
+              className="text-blue-500 py-2 px-6 rounded-lg hover:text-blue-600 hover:underline transition"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
