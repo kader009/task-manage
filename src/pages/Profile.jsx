@@ -16,7 +16,7 @@ const ProfilePage = () => {
   return (
     <div>
       <div className="h-96 flex items-center justify-center bg-gray-100">
-        <div className="max-w-md mx-auto p-6 bg-white shadow-md rounded-lg">
+        <div className="max-w-md mx-auto px-12 py-10 bg-white shadow-md rounded-lg">
           <h2 className="text-xl font-semibold mb-4 text-center">
             User Profile
           </h2>
