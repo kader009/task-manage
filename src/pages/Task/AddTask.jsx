@@ -1,4 +1,4 @@
-import { useState } from 'react'; 
+import { useState } from 'react';
 import { toast } from 'react-toastify';
 
 const AddTask = () => {
@@ -12,13 +12,16 @@ const AddTask = () => {
     const taskList = { title, description, status, priority };
 
     try {
-      const response = await fetch(`https://task-manage-backend-blush.vercel.app/tasks`, { 
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(taskList),
-      });
+      const response = await fetch(
+        `https://task-manage-backend-blush.vercel.app/tasks`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(taskList),
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();
@@ -40,7 +43,9 @@ const AddTask = () => {
   return (
     <div className="flex justify-center items-center">
       <div className="w-full max-w-lg p-6 bg-white rounded-lg shadow-md">
-        <h1 className="my-3 text-2xl font-semibold text-center">Add Your Task</h1>
+        <h1 className="my-3 text-2xl font-semibold text-center">
+          Add Your Task
+        </h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label
@@ -125,7 +130,25 @@ const AddTask = () => {
               type="submit"
               className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition font-semibold"
             >
-              Submit Task
+              <div className="flex justify-center items-center gap-2">
+                Submit Task
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="size-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
+                </span>
+              </div>
             </button>
           </div>
         </form>
