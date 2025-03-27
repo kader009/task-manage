@@ -1,17 +1,25 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import { useEffect, useState } from 'react';
 
 const ProfilePage = () => {
   const { user } = useAuth();
-  const [userInfo, setUserInfo] = useState();
+  const [userInfo, setUserInfo] = useState(); // https://task-manage-backend-blush.vercel.app
 
   useEffect(() => {
-    fetch(`https://task-manage-backend-blush.vercel.app/user/${user?.email}`)
-      .then((res) => res.json())
-      .then((data) => setUserInfo(data));
+    if (user?.email) {
+      fetch(`http://localhost:5000/users/get/${user.email}`, {
+        method:"GET",
+        credentials: 'include',
+      })
+        .then((res) => res.json())
+        .then((data) => setUserInfo(data))
+        .catch((error) => console.error("Error fetching user info:", error));
+    }
   }, [user]);
+  
   console.log(userInfo);
+  
 
   return (
     <div>
@@ -37,9 +45,9 @@ const ProfilePage = () => {
               {user?.email}
             </p>
           </div>
-          <button className="mt-4 w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
-            <Link to={`edit-profile/${userInfo?._id}`}>Update Profile</Link>
-          </button>
+          {/* <button className="mt-4 w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
+            <Link to={`/dashboard/profile/edit-profile/${userInfo}`}>Update Profile</Link>
+          </button> */}
         </div>
       </div>
     </div>
