@@ -4,11 +4,11 @@ import { useEffect, useState } from 'react';
 
 const ProfilePage = () => {
   const { user } = useAuth();
-  const [userInfo, setUserInfo] = useState(); // https://task-manage-backend-blush.vercel.app
+  const [userInfo, setUserInfo] = useState();
 
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:5000/users/get/${user.email}`, {
+      fetch(`https://task-manage-backend-blush.vercel.app/users/get/${user.email}`, {
         method:"GET",
         credentials: 'include',
       })
