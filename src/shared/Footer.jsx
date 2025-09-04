@@ -52,7 +52,7 @@ const Footer = () => {
           </div>
         </nav>
         <h3 className="font-semibold text-[#000] dark:text-white">
-          © 2024 All rights reserved and copyright by Abdul Kader
+          © {new Date().getFullYear()} All rights reserved and copyright by Abdul Kader
         </h3>
       </footer>
   );
