@@ -1,60 +1,73 @@
 const Footer = () => {
   return (
-      <footer className="dark:bg-gray-800 footer p-10 bg-base-300 text-base-content flex flex-wrap justify-between items-center"> 
-        <nav>
-          <h6 className="font-semibold text-[#000] dark:text-white">Services</h6>
-          <a className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Branding</a>
-          <a className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Design</a>
-          <a className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Marketing</a>
-        </nav>
-        <nav>
-          <h6 className="font-semibold text-[#000] dark:text-white">Company</h6>
-          <a className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 ">About us</a>
-          <a className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Contact</a>
-          <a className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Jobs</a>
-        </nav>
-        <nav>
-          <h6 className="font-semibold text-[#000] dark:text-white">Social link</h6>
-          <div className="grid grid-flow-col gap-4 text-[#000] dark:text-gray-300">
-            <a href="https://x.com/Bulletinkader" className="hover:text-blue-500 dark:hover:text-blue-400">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                className="fill-current"
-              >
-                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+    <footer className="bg-base-300 dark:bg-gray-900 text-base-content dark:text-gray-200 px-6 py-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+        
+        {/* Brand Section */}
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">TaskHub</h2>
+          <p className="mt-3 text-gray-600 dark:text-gray-400 text-sm">
+            Manage your tasks, boost productivity, and stay organized with TaskHub.
+          </p>
+        </div>
+
+        {/* Services */}
+        <div>
+          <h6 className="font-semibold text-gray-900 dark:text-white mb-3">Services</h6>
+          <ul className="space-y-2">
+            <li><a href="#" className="hover:text-blue-500 transition">Task Management</a></li>
+            <li><a href="#" className="hover:text-blue-500 transition">Team Collaboration</a></li>
+            <li><a href="#" className="hover:text-blue-500 transition">Analytics</a></li>
+          </ul>
+        </div>
+
+        {/* Company */}
+        <div>
+          <h6 className="font-semibold text-gray-900 dark:text-white mb-3">Company</h6>
+          <ul className="space-y-2">
+            <li><a href="#" className="hover:text-blue-500 transition">About Us</a></li>
+            <li><a href="#" className="hover:text-blue-500 transition">Contact</a></li>
+            <li><a href="#" className="hover:text-blue-500 transition">Careers</a></li>
+          </ul>
+        </div>
+
+        {/* Stay Updated (Social Links only) */}
+        <div>
+          <h6 className="font-semibold text-gray-900 dark:text-white mb-3">Stay Updated</h6>
+
+          {/* Social Icons */}
+          <div className="flex space-x-5 mt-2">
+            {/* Facebook */}
+            <a href="https://www.facebook.com/ra.sel.7549/" className="hover:text-blue-500 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
               </svg>
             </a>
-            <a className="hover:text-blue-500 dark:hover:text-blue-400">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                className="fill-current"
-              >
-                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+
+            {/* Instagram */}
+            <a href="https://www.instagram.com/" className="hover:text-pink-500 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.344 3.608 1.32.975.975 1.257 2.242 1.32 3.608.058 1.266.069 1.646.069 4.85s-.012 3.584-.07 4.85c-.062 1.366-.344 2.633-1.32 3.608-.975.975-2.242 1.257-3.608 1.32-1.266.058-1.646.069-4.85.069s-3.584-.012-4.85-.07c-1.366-.062-2.633-.344-3.608-1.32-.975-.975-1.257-2.242-1.32-3.608-.058-1.266-.069-1.646-.069-4.85s.012-3.584.07-4.85c.062-1.366.344-2.633 1.32-3.608.975-.975 2.242-1.257 3.608-1.32 1.266-.058 1.646-.069 4.85-.069zm0-2.163c-3.259 0-3.667.012-4.947.071-1.563.072-2.954.341-4.036 1.423-1.082 1.082-1.351 2.473-1.423 4.036-.059 1.28-.071 1.688-.071 4.947s.012 3.667.071 4.947c.072 1.563.341 2.954 1.423 4.036 1.082 1.082 2.473 1.351 4.036 1.423 1.28.059 1.688.071 4.947.071s3.667-.012 4.947-.071c1.563-.072 2.954-.341 4.036-1.423 1.082-1.082 1.351-2.473 1.423-4.036.059-1.28.071-1.688.071-4.947s-.012-3.667-.071-4.947c-.072-1.563-.341-2.954-1.423-4.036-1.082-1.082-2.473-1.351-4.036-1.423-1.28-.059-1.688-.071-4.947-.071z"/>
+                <path d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998z"/>
+                <circle cx="18.406" cy="5.594" r="1.44"/>
               </svg>
             </a>
-            <a href="https://www.facebook.com/ra.sel.7549/" className="hover:text-blue-500 dark:hover:text-blue-400">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                className="fill-current"
-              >
-                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+
+            {/* LinkedIn */}
+            <a href="https://www.linkedin.com/" className="hover:text-blue-700 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22.23 0H1.77C.79 0 0 .774 0 1.727v20.545C0 23.226.79 24 1.77 24h20.46C23.21 24 24 23.226 24 22.273V1.727C24 .774 23.21 0 22.23 0zM7.06 20.452H3.545V9h3.515v11.452zM5.303 7.544a2.03 2.03 0 1 1 0-4.059 2.03 2.03 0 0 1 0 4.06zm14.847 12.908h-3.515v-5.605c0-1.337-.025-3.062-1.865-3.062-1.867 0-2.153 1.46-2.153 2.968v5.699h-3.515V9h3.377v1.561h.048c.471-.891 1.621-1.833 3.336-1.833 3.565 0 4.219 2.346 4.219 5.39v6.834z"/>
               </svg>
             </a>
           </div>
-        </nav>
-        <h3 className="font-semibold text-[#000] dark:text-white">
-          © {new Date().getFullYear()} All rights reserved and copyright by Abdul Kader
-        </h3>
-      </footer>
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div className="border-t border-gray-300 dark:border-gray-700 mt-8 pt-5 text-center text-sm">
+        © {new Date().getFullYear()} TaskHub | All rights reserved. Built by <span className="font-semibold">Abdul Kader</span>
+      </div>
+    </footer>
   );
 };
 
