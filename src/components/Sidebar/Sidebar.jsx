@@ -41,7 +41,6 @@ const menuItems = [
 
 const Sidebar = () => {
   const { logOut, user } = useAuth();
-  console.log(user);
 
   return (
     <div>
