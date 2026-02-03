@@ -65,7 +65,7 @@ const Footer = () => {
 
       {/* Divider */}
       <div className="border-t border-gray-300 dark:border-gray-700 mt-8 pt-5 text-center text-sm">
-        © {new Date().getFullYear()} TaskHub | All rights reserved. Built by <span className="font-semibold">Abdul Kader</span>
+        © {new Date().getFullYear()} TaskHub | All rights reserved.
       </div>
     </footer>
   );
