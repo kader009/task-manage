@@ -41,6 +41,7 @@ const menuItems = [
 
 const Sidebar = () => {
   const { logOut, user } = useAuth();
+  console.log(user);
 
   return (
     <div>
@@ -63,14 +64,6 @@ const Sidebar = () => {
           defaultSelectedKeys={['1']}
           items={menuItems}
         />
-        <div className="ms-6 mt-4">
-          <button
-            onClick={logOut}
-            className="px-14 py-2 rounded bg-blue-500 text-white"
-          >
-            Logout
-          </button>
-        </div>
         <div className="avatar ms-16 mt-6">
           <div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
             <img
@@ -81,6 +74,14 @@ const Sidebar = () => {
               alt="User Avatar"
             />
           </div>
+        </div>
+        <div className="ms-6 mt-4">
+          <button
+            onClick={logOut}
+            className="px-14 py-2 rounded bg-blue-500 text-white"
+          >
+            Logout
+          </button>
         </div>
       </Sider>
     </div>
